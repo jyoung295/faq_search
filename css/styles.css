@@ -1,10 +1,12 @@
-.container{
+.container {
 	padding: 50px;
 	display: flex;
 	align-content: center;
 	justify-content: center;
 }
 
-.faq-container{
-
+.faq-container {
+	width: 60%;
+	height: auto;
+	margin-bottom: 100px;
 }
