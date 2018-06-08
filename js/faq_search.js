@@ -23,7 +23,7 @@
 	});
 
 	//indexes only li h2's (meaning only questions)
-	$questions.each(function(){
+	$questions.each(function () {
 		questionsIndexed.push($(this).text().replace(/\s{2,}/g, ' ').toLowerCase())
 	});
 
@@ -61,10 +61,10 @@
 			for (var i in questionsIndexed) {
 				$question = $questions.eq(i);
 				$item = $items.eq(i);
-				if (questionsIndexed[i].indexOf(searchVal) != -1){
+				if (questionsIndexed[i].indexOf(searchVal) != -1) {
 					$item.removeClass('is-hidden');
 					$question.html($question.html().replace(new RegExp(searchVal + '(?!([^<]+)?>)', 'gi'), '<span class="highlight">$&</span>'));
-				}else
+				} else
 					$item.addClass('is-hidden');
 			}
 		} else {
@@ -79,10 +79,35 @@
 
 //toggle items on title press
 ;
-(function($, window, document){
-	$(document).on('click', '.faq-container h2 a', function(e){
+(function ($, window, document) {
+	$(document).on('click', '.faq-container h2 a', function (e) {
 		e.preventDefault();
 		$(this).parents('li').children('div').toggleClass('is-active');
 		$(this).toggleClass('targeted');
 	});
+})(jQuery, window, document);
+
+//auto show item content when results filter down to single result
+;
+(function ($, window, document) {
+
+	var $container = $('.faq-container');
+	if (!$container.length)
+		return true;
+
+	var $input = $container.find('input'),
+		$items = $container.find('ul li'),
+		$item = $(),
+		$jsActivated = $();
+
+	$input.on('keyup', function () {
+		$item = $items.not('.is-hidden');
+		console.log($item);
+		if ($item.length == 1){
+			$jsActivated = $item.children('div');
+			$jsActivated.addClass('is-active');
+		}else
+			$jsActivated.removeClass('is-active');
+	});
+
 })(jQuery, window, document);
