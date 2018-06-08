@@ -194,32 +194,12 @@ html {
   color: #BC98F2;
 }
 
-.faq-container ul li h2 a:focus {
-  color: #BC98F2;
-}
-
-.faq-container ul li h2 a:target {
-  color: #BC98F2;
-}
-
 .faq-container ul li h2 a .is-active {
   color: #BC98F2;
 }
 
 .faq-container ul li div {
   display: none;
-}
-
-.faq-container ul li .ishidden {
-  display: none;
-}
-
-.faq-container ul li .isactive div {
-  display: block;
-}
-
-.faq-container ul li:target div {
-  display: block;
 }
 
 input {
@@ -257,7 +237,19 @@ input:-ms-input-placeholder {
   display: none;
 }
 
-.not-found .is-active {
-  display: block;
+.is-hidden {
+  display: none !important;
+}
+
+.is-active {
+  display: block !important;
+}
+
+.is-visable {
+  display: block !important;
+}
+
+.targeted {
+  color: #BC98F2 !important;
 }
 /*# sourceMappingURL=styles.css.map */
