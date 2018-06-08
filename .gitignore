@@ -1,2 +1,4 @@
 .DS_Store
 /.vscode
+
+/css/*.css.map
