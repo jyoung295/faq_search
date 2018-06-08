@@ -248,4 +248,8 @@ input:-ms-input-placeholder {
 .targeted {
   color: #BC98F2 !important;
 }
+
+.hidden-keywords {
+  display: none;
+}
 /*# sourceMappingURL=styles.css.map */
