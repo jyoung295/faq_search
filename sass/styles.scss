@@ -22,10 +22,12 @@ html {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	p{
+	p {
 		line-height: 1.6;
 	}
 }
+
+
 
 .faq-container {
 	width: 50%;
@@ -53,12 +55,6 @@ html {
 					&:hover {
 						color: $hover-color;
 					}
-					&:focus {
-						color: $hover-color;
-					}
-					&:target {
-						color: $hover-color;
-					}
 					.is-active {
 						color: $hover-color;
 					}
@@ -67,21 +63,8 @@ html {
 				font-weight: 200;
 				margin-bottom: 25px;
 			}
-			div{
+			div {
 				display: none;
-			}
-			.ishidden{
-				display: none;
-			}
-			.isactive{
-				div{
-					display: block;
-				}
-			}
-			&:target{
-				div{
-					display: block;
-				}
 			}
 		}
 	}
@@ -112,12 +95,25 @@ input {
 	}
 }
 
-.not-found{
+.not-found {
 	font-size: 20px;
 	font-style: italic;
 	color: $text-color;
 	display: none;
-	.is-active{
-		display: block;
-	}
+}
+
+.is-hidden {
+	display: none !important;
+}
+
+.is-active {
+	display: block !important;
+}
+
+.is-visable{
+	display: block !important;
+}
+
+.targeted{
+	color: $hover-color !important;
 }
