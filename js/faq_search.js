@@ -71,13 +71,12 @@
 			$items.removeClass('is-hidden');
 		}
 
-		console.log($items.not('.is-hidden').length);
 		$notfound.toggleClass('is-visable', $items.not('.is-hidden').length == 0);
 	});
 
 })(jQuery, window, document);
 
-//toggle items on title press
+//toggle item content on title press
 ;
 (function ($, window, document) {
 	$(document).on('click', '.faq-container h2 a', function (e) {
@@ -98,16 +97,23 @@
 	var $input = $container.find('input'),
 		$items = $container.find('ul li'),
 		$item = $(),
-		$jsActivated = $();
+		$question = $(),
+		$jsActivated = $(),
+		$jsTargeted = $();
 
 	$input.on('keyup', function () {
 		$item = $items.not('.is-hidden');
-		console.log($item);
-		if ($item.length == 1){
+		$question = $item.children('h2').children('a');
+
+		if ($item.length == 1) {
 			$jsActivated = $item.children('div');
+
 			$jsActivated.addClass('is-active');
-		}else
+			$question.addClass('targeted');
+		} else {
 			$jsActivated.removeClass('is-active');
+			$question.removeClass('targeted')
+		}
 	});
 
 })(jQuery, window, document);
