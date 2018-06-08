@@ -17,7 +17,8 @@
 		itemsIndexed = [],
 		$questions = $container.find('ul li h2'),
 		$question = $(),
-		questionsIndexed = [];
+		questionsIndexed = [],
+		$hiddenKeywords = $container.find('ul li h2 hidden');
 
 	//indexes all li items (includes question and answer)
 	$items.each(function () {
@@ -25,9 +26,12 @@
 	});
 
 	//indexes only li h2's (meaning only questions)
+	//also indexes the hidden keywords from each question
 	$questions.each(function () {
 		questionsIndexed.push($(this).text().replace(/\s{2,}/g, ' ').toLowerCase());
 	});
+
+	console.log(questionsIndexed);
 
 	$input.on('keyup', function (e) {
 		if (e.keyCode == 13) {
@@ -64,6 +68,7 @@
 				$question = $questions.eq(i);
 				$item = $items.eq(i);
 				if (questionsIndexed[i].indexOf(searchVal) != -1) {
+					console.log(questionsIndexed[i] + '\n' + searchVal);
 					$item.removeClass('is-hidden');
 					$question.html($question.html().replace(new RegExp(searchVal + '(?!([^<]+)?>)', 'gi'), '<span class="highlight">$&</span>'));
 				} else
