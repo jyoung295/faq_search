@@ -140,7 +140,7 @@ html {
 
 .title {
   font-family: "Quicksand", sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 3em;
   color: #337FB2;
   margin-bottom: 25px;
@@ -154,10 +154,13 @@ html {
   flex-direction: column;
 }
 
+.container p {
+  line-height: 1.6;
+}
+
 .faq-container {
-  width: 60%;
+  width: 50%;
   height: auto;
-  padding: 25px;
   margin-bottom: 100px;
   display: flex;
   align-content: center;
@@ -166,10 +169,57 @@ html {
   font-family: "Quicksand", sans-serif;
 }
 
-.faq-container ul li {
-  padding-top: 10px;
-  margin-bottom: 25px;
+.faq-container .highlight {
+  background-color: #fffd77;
+}
+
+.faq-container ul li:not(:first-child) {
+  padding-top: 25px;
+  margin-top: 25px;
   border-top: 1px solid lightgray;
+}
+
+.faq-container ul li h2 {
+  font-size: 2em;
+  font-weight: 200;
+  margin-bottom: 25px;
+}
+
+.faq-container ul li h2 a {
+  color: #337FB2;
+  text-decoration: none;
+}
+
+.faq-container ul li h2 a:hover {
+  color: #BC98F2;
+}
+
+.faq-container ul li h2 a:focus {
+  color: #BC98F2;
+}
+
+.faq-container ul li h2 a:target {
+  color: #BC98F2;
+}
+
+.faq-container ul li h2 a .is-active {
+  color: #BC98F2;
+}
+
+.faq-container ul li div {
+  display: none;
+}
+
+.faq-container ul li .ishidden {
+  display: none;
+}
+
+.faq-container ul li .isactive div {
+  display: block;
+}
+
+.faq-container ul li:target div {
+  display: block;
 }
 
 input {
@@ -177,22 +227,37 @@ input {
   width: 100%;
   height: 60px;
   font-size: 20px;
+  font-weight: 100;
   background-color: #fff;
   box-shadow: 0px 2px 4px rgba(52, 67, 75, 0.2);
   display: block;
   padding: 0 20px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 input::-webkit-input-placeholder {
   color: #337FB2;
+  font-style: italic;
 }
 
 input::-moz-placeholder {
   color: #337FB2;
+  font-style: italic;
 }
 
 input:-ms-input-placeholder {
   color: #337FB2;
+  font-style: italic;
+}
+
+.not-found {
+  font-size: 20px;
+  font-style: italic;
+  color: #337FB2;
+  display: none;
+}
+
+.not-found .is-active {
+  display: block;
 }
 /*# sourceMappingURL=styles.css.map */
