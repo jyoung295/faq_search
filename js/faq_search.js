@@ -1,8 +1,10 @@
-'use strict';
+(function () {
+	'use strict';
+})();
 
 
 // Search & highlight
-;
+
 (function ($, window, document) {
 	var $container = $('.faq-container');
 	if (!$container.length)
@@ -24,7 +26,7 @@
 
 	//indexes only li h2's (meaning only questions)
 	$questions.each(function () {
-		questionsIndexed.push($(this).text().replace(/\s{2,}/g, ' ').toLowerCase())
+		questionsIndexed.push($(this).text().replace(/\s{2,}/g, ' ').toLowerCase());
 	});
 
 	$input.on('keyup', function (e) {
@@ -77,7 +79,7 @@
 })(jQuery, window, document);
 
 //toggle item content on title press
-;
+
 (function ($, window, document) {
 	$(document).on('click', '.faq-container h2 a', function (e) {
 		e.preventDefault();
@@ -87,7 +89,7 @@
 })(jQuery, window, document);
 
 //auto show item content when results filter down to single result
-;
+
 (function ($, window, document) {
 
 	var $container = $('.faq-container');
@@ -112,7 +114,7 @@
 			$question.addClass('targeted');
 		} else {
 			$jsActivated.removeClass('is-active');
-			$question.removeClass('targeted')
+			$question.removeClass('targeted');
 		}
 	});
 
