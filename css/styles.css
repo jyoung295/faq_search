@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -135,14 +136,14 @@ table {
 
 body,
 html {
-  background: #E8F7FF;
+  background: #f5f8fa;
 }
 
 .title {
   font-family: "Quicksand", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 3em;
-  color: #337FB2;
+  color: #787878;
   margin-bottom: 25px;
 }
 
@@ -156,27 +157,30 @@ html {
 
 .container p {
   line-height: 1.6;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333333;
 }
 
 .faq-container {
-  width: 50%;
+  width: 70%;
   height: auto;
   margin-bottom: 100px;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   font-family: "Quicksand", sans-serif;
 }
 
 .faq-container .highlight {
-  background-color: #fffd77;
+  background-color: #a6d2ff;
 }
 
 .faq-container ul li:not(:first-child) {
   padding-top: 25px;
   margin-top: 25px;
-  border-top: 1px solid lightgray;
+  border-top: 1px solid #005dba;
 }
 
 .faq-container ul li h2 {
@@ -186,12 +190,12 @@ html {
 }
 
 .faq-container ul li h2 a {
-  color: #337FB2;
+  color: #787878;
   text-decoration: none;
 }
 
 .faq-container ul li h2 a:hover {
-  color: #BC98F2;
+  color: #005dba;
 }
 
 .faq-container ul li div {
@@ -200,37 +204,43 @@ html {
 
 input {
   border: none;
-  width: 100%;
+  border-radius: 10px;
+  width: 80%;
   height: 60px;
-  font-size: 20px;
-  font-weight: 100;
+  font-size: 18px;
   background-color: #fff;
-  box-shadow: 0px 2px 4px rgba(52, 67, 75, 0.2);
+  box-shadow: 2px 4px 7px rgba(52, 67, 75, 0.2);
   display: block;
   padding: 0 20px;
   margin-bottom: 50px;
 }
 
 input::-webkit-input-placeholder {
-  color: #337FB2;
-  font-style: italic;
+  color: #9ea9b0;
+  font-style: oblique;
+  font-weight: 300;
 }
 
 input::-moz-placeholder {
-  color: #337FB2;
-  font-style: italic;
+  color: #9ea9b0;
+  font-style: oblique;
+  font-weight: 300;
 }
 
 input:-ms-input-placeholder {
-  color: #337FB2;
-  font-style: italic;
+  color: #9ea9b0;
+  font-style: oblique;
+  font-weight: 300;
 }
 
 .not-found {
-  font-size: 20px;
-  font-style: italic;
-  color: #337FB2;
   display: none;
+}
+
+.not-found p {
+  font-size: 20px;
+  font-style: oblique;
+  color: #333333;
 }
 
 .is-hidden {
@@ -246,7 +256,7 @@ input:-ms-input-placeholder {
 }
 
 .targeted {
-  color: #BC98F2 !important;
+  color: #005dba !important;
 }
 
 .hidden-keywords {
