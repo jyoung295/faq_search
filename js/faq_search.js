@@ -31,8 +31,6 @@
 		questionsIndexed.push($(this).text().replace(/\s{2,}/g, ' ').toLowerCase());
 	});
 
-	console.log(questionsIndexed);
-
 	$input.on('keyup', function (e) {
 		if (e.keyCode == 13) {
 			$input.trigger('blur');
@@ -68,7 +66,6 @@
 				$question = $questions.eq(i);
 				$item = $items.eq(i);
 				if (questionsIndexed[i].indexOf(searchVal) != -1) {
-					console.log(questionsIndexed[i] + '\n' + searchVal);
 					$item.removeClass('is-hidden');
 					$question.html($question.html().replace(new RegExp(searchVal + '(?!([^<]+)?>)', 'gi'), '<span class="highlight">$&</span>'));
 				} else

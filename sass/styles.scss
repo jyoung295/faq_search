@@ -1,18 +1,24 @@
-$text-color: #337FB2;
-$hover-color: #BC98F2;
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400');
+@import 'reset';
+$head-color: #787878;
+$text-color: #333333;
+$ph-text-color: #9ea9b0;
+$hover-color: #005dba;
+$active-color: #005dba;
+$bg: #f5f8fa;
+$highlight: #a6d2ff;
 $font: 'Quicksand',
 sans-serif;
-@import 'reset';
 body,
 html {
-	background: #E8F7FF;
+	background: $bg;
 }
 
 .title {
 	font-family: $font;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 3em;
-	color: $text-color;
+	color: $head-color;
 	margin-bottom: 25px;
 }
 
@@ -24,33 +30,34 @@ html {
 	flex-direction: column;
 	p {
 		line-height: 1.6;
+		font-size: 16px;
+		font-weight: 300;
+		color: $text-color;
 	}
 }
 
-
-
 .faq-container {
-	width: 50%;
+	width: 70%;
 	height: auto;
 	margin-bottom: 100px;
 	display: flex;
-	align-content: center;
+	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	font-family: $font;
 	.highlight {
-		background-color: #fffd77;
+		background-color: $highlight;
 	}
 	ul {
 		li {
 			&:not(:first-child) {
 				padding-top: 25px;
 				margin-top: 25px;
-				border-top: 1px solid lightgray;
+				border-top: 1px solid $hover-color;
 			}
 			h2 {
 				a {
-					color: $text-color;
+					color: $head-color;
 					text-decoration: none;
 					&:hover {
 						color: $hover-color;
@@ -69,33 +76,38 @@ html {
 
 input {
 	border: none;
-	width: 100%;
+	border-radius: 10px;
+	width: 80%;
 	height: 60px;
-	font-size: 20px;
-	font-weight: 100;
+	font-size: 18px;
 	background-color: #fff;
-	box-shadow: 0px 2px 4px rgba( 52, 67, 75, .2);
+	box-shadow: 2px 4px 7px rgba( 52, 67, 75, .2);
 	display: block;
 	padding: 0 20px;
 	margin-bottom: 50px;
 	&::-webkit-input-placeholder {
-		color: $text-color;
-		font-style: italic;
+		color: $ph-text-color;
+		font-style: oblique;
+		font-weight: 300;
 	}
 	&::-moz-placeholder {
-		color: $text-color;
-		font-style: italic;
+		color: $ph-text-color;
+		font-style: oblique;
+		font-weight: 300;
 	}
 	&:-ms-input-placeholder {
-		color: $text-color;
-		font-style: italic;
+		color: $ph-text-color;
+		font-style: oblique;
+		font-weight: 300;
 	}
 }
 
 .not-found {
-	font-size: 20px;
-	font-style: italic;
-	color: $text-color;
+	p {
+		font-size: 20px;
+		font-style: oblique;
+		color: $text-color;
+	}
 	display: none;
 }
 
@@ -107,14 +119,14 @@ input {
 	display: block !important;
 }
 
-.is-visable{
+.is-visable {
 	display: block !important;
 }
 
-.targeted{
-	color: $hover-color !important;
+.targeted {
+	color: $active-color !important;
 }
 
-.hidden-keywords{
+.hidden-keywords {
 	display: none;
 }
